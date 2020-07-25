@@ -49,7 +49,7 @@ class SrpController extends Controller {
             'kill_id'        => $request->input('srpKillId'),
             'kill_token'     => $request->input('srpKillToken'),
             'approved'       => 0,
-            'cost'           => $request->input('srpCost'),
+            'cost'           => $request->input('requestCost'),
             'type_id'        => $request->input('srpTypeId'),
             'ship_type'      => $request->input('srpShipType')
         ]);

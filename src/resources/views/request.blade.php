@@ -20,7 +20,7 @@
                     <label for="srpPingContent">{{ trans('srp::srp.ping') }}</label>
                     <textarea class="form-control" name="srpPingContent" rows="3" placeholder="{{ trans('srp::srp.ping_info') }}"></textarea>
                 </div>
-                <div class="form-group" id="srpRequestCost">
+                <div class="form-group" id="srpRequestCost" style="display: none;">
                     <label for="srpRequestCost">RequestCost</label>
                     <input type="number" class="form-control" id="requestCost" name="requestCost" placeholder="123,456,789.00">
                 </div>

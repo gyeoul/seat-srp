@@ -36,6 +36,9 @@ class SrpAdminController extends Controller {
             case 'Pending':
                 $killmail->approved = '0';
                 break;
+             case 'GetActualLoss':
+               // code...
+               break;
         }
 
         $killmail->approver = auth()->user()->name;

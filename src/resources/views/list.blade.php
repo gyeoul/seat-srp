@@ -49,7 +49,7 @@
                           {{ number_format($kill->cost, 2) }} ISK
                       </button>
                       <br>
-                      <button type="button" class="btn btn-xs btn-info" id="actualLoss">GetActualLoss</button>
+                      <button type="button" class="btn btn-xs btn-info" id="actualLoss" name="{{ $kill->kill_id }}">GetActualLoss</button>
                   </td>
                   @if ($kill->approved === 0)
                     <td id="id-{{ $kill->kill_id }}"><span class="label label-warning">Pending</span></td>
@@ -239,8 +239,6 @@
         var table = $('#insurances').find('table').DataTable();
         table.destroy();
     });
-    
-    $('#actualLoss').on('click', function(){})
 
     $('#srps tbody').on('click', 'button', function(btn) {
         $.ajax({
@@ -257,6 +255,8 @@
               $("#id-"+data.value).html('<span class="label label-primary">Paid Out</span>');
           } else if (data.name === "Pending") {
               $("#id-"+data.value).html('<span class="label label-warning">Pending</span>');
+          } else if (data.name === "GetActualLoss") {
+              //code
           }
           $("#approver-"+data.value).html(data.approver);
         });

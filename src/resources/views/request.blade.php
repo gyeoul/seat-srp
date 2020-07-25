@@ -297,10 +297,11 @@
         $('.overlay').hide();
         $('#kill-report').hide();
         $('#saveKillMail').hide();
-        $('#srpRequsetCost').hide();
+        $('#srpRequestCost').hide();
 
         $('#readUrl').on('click', function () {
             $('.overlay').show();
+            $('#srpRequestCost').hide();
             kmFormGroup = $('#killMailUrl').parent('div.form-group');
             kmFormGroup.find('span.help-block').hide();
             kmFormGroup.removeClass('has-error');
@@ -321,7 +322,7 @@
                 if (result) {
                     $('#kill-report').show();
                     $('#saveKillMail').show();
-                    $('#srpRequsetCost').show();
+                    $('#srpRequestCost').show();
                     for (var slot in result) {
 
                         if (slot.indexOf('HiSlot') >= 0)
@@ -374,7 +375,7 @@
                 kmFormGroup.find('span.help-block').show();
             });
         });
-        id_to_names();
+        ids_to_names();
     </script>
 
 @endpush

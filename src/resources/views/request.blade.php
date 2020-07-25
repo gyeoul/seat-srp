@@ -20,6 +20,10 @@
                     <label for="srpPingContent">{{ trans('srp::srp.ping') }}</label>
                     <textarea class="form-control" name="srpPingContent" rows="3" placeholder="{{ trans('srp::srp.ping_info') }}"></textarea>
                 </div>
+                <div class="form-group" id="srpRequestCost">
+                    <label for="srpRequestCost">RequestCost</label>
+                    <input type="number" class="form-control" id="requestCost" name="requestCost" placeholder="123,456,789.00">
+                </div>
             </div>
             <div class="box-footer">
                 <div class="btn-group pull-right" role="group">
@@ -293,6 +297,7 @@
         $('.overlay').hide();
         $('#kill-report').hide();
         $('#saveKillMail').hide();
+        $('#srpRequsetCost').hide();
 
         $('#readUrl').on('click', function () {
             $('.overlay').show();
@@ -316,6 +321,7 @@
                 if (result) {
                     $('#kill-report').show();
                     $('#saveKillMail').show();
+                    $('#srpRequsetCost').show();
                     for (var slot in result) {
 
                         if (slot.indexOf('HiSlot') >= 0)
